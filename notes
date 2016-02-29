@@ -7,8 +7,38 @@
 -To create your account, run `npm adduser`
 
 -npm helps us build projects
-  -but for npm to be able to do that, we need to tell npm a little bit about your project
+  -but for npm to be able to do that, we need to tell npm a little bit about our project
   -we can tell npm about our project in a package.json file
 
   -npm init --scope=<username>
     -this will create a package.json file
+
+  -The convention is to have a single git repo for each module or project.
+    -Use the `git init` command to set up our working dir as a git project
+
+  -The first thing that most people do with npm is install a dependency.
+    -Dependencies are fetched from the registry, and unpacked in the `node_modules` folder.
+    -To install a module, use the `npm install <modulename>` command.
+
+  -npm isn't just for installing stuff.  It also shows you what you have installed.
+    -You can do this using the `npm ls` command
+      -our dependencies should be listed in the package.json file in an object called 'dependencies'
+        -when we install packages, we must update the package.json file to list out this dependency
+          -if we don't, an error shows up as 'extraneous', warning us that we have something there that
+          we haven't listed as a dependency.
+
+          -use the `--save` flag when installing dependencies.
+            -You might not want to do this with things that you're just trying out
+            -when you decide on something you can use this flag to update your package.json file easily
+
+  -look at the package.json file, it has this rather odd bit in it:
+
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    }
+
+    -npm can be used as a task runner
+      -almost every module and project will have a test script that runs to make sure everything is good.
+        -in order to help remind you to do this, npm puts a "always failing" test in there by default
+
+    

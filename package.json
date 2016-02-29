@@ -1,0 +1,28 @@
+{
+  "name": "@jdw_dev/npm",
+  "version": "1.0.0",
+  "description": "demo package made with nodechool's how-to-npm workshopper",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rljusticio/npm-test.git"
+  },
+  "keywords": [
+    "npm",
+    "test",
+    "nodeschool",
+    "how-to-git"
+  ],
+  "author": "Justin Walters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rljusticio/npm-test/issues"
+  },
+  "homepage": "https://github.com/rljusticio/npm-test#readme",
+  "dependencies": {
+    "@linclark/pkg": "^1.0.2"
+  }
+}
