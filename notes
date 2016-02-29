@@ -13,15 +13,15 @@
   -npm init --scope=<username>
     -this will create a package.json file
 
-  -The convention is to have a single git repo for each module or project.
-    -Use the `git init` command to set up our working dir as a git project
+  -The convention is to have a single git repo for each module or project
+    -Use the `git init` command to set up our working directory as a git project
 
   -The first thing that most people do with npm is install a dependency.
     -Dependencies are fetched from the registry, and unpacked in the `node_modules` folder.
     -To install a module, use the `npm install <modulename>` command.
 
   -npm isn't just for installing stuff.  It also shows you what you have installed.
-    -You can do this using the `npm ls` command
+    -we can do this using the `npm ls` command
       -our dependencies should be listed in the package.json file in an object called 'dependencies'
         -when we install packages, we must update the package.json file to list out this dependency
           -if we don't, an error shows up as 'extraneous', warning us that we have something there that
@@ -41,4 +41,8 @@
       -almost every module and project will have a test script that runs to make sure everything is good.
         -in order to help remind you to do this, npm puts a "always failing" test in there by default
 
-    
+-Before we can share this code with the world, we need to make it a bit more polished so that people know how to use it.
+  -be sure to add readme, description, and repository fields
+
+-it's very easy for all npm users to publish their modules and share them with the world.
+  -packages get into the registry by using the `npm publish` command
