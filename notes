@@ -1,0 +1,14 @@
+-one of the most important things npm does is install packages
+
+-npm is best when you can be a part of it
+  -this starts with making an account
+
+-To see who you're logged in as, run `npm whoami`
+-To create your account, run `npm adduser`
+
+-npm helps us build projects
+  -but for npm to be able to do that, we need to tell npm a little bit about your project
+  -we can tell npm about our project in a package.json file
+
+  -npm init --scope=<username>
+    -this will create a package.json file
