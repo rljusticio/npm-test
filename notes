@@ -66,3 +66,20 @@
           -if you don't trust the machines, you can open up your package.json file by hand, and put some new numbers in the "version" field
           -The npm registry won't let you publish a new release of your package without updating the version number!
             -get used to the idea of bumping the version whenever you want to publish, even if the change is really minor.
+
+-Healthy packages get published again and again with new and exciting bug fixes
+  -change the version number whenever the package is updated
+
+-every published packageon npm has a dist-tags entry on it which maps strings like "latest" to version numbers like "1.2.48"
+  -by default, the latest version is what gets installed
+  -when we publish, the version that we publish gets tagged as latest
+
+  -if you need to publish something and not make it the default version of a package, we can manually manage these distribution tags with the dist-tags function
+    -npm dist-tag add <pkg>@<version> [<tag>]
+      -npm dist-tag add jdw_dev/npm @1.0.1 latest
+
+-the only dist-tag we can't ever remove is latest
+  -every package installs it's latest tag by default
+    -we can however, point latest to a different version, or delete other tags
+      -npm dist-tag rm <pkg> <tag>
+        -npm dist-tag rm jdw_dev/npm tag
