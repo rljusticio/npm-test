@@ -1,6 +1,6 @@
 {
   "name": "@jdw_dev/npm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "demo package made with nodechool's how-to-npm workshopper",
   "main": "index.js",
   "scripts": {

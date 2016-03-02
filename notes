@@ -46,3 +46,23 @@
 
 -it's very easy for all npm users to publish their modules and share them with the world.
   -packages get into the registry by using the `npm publish` command
+
+-every package in npm has a version number associated with it
+  -as we release updates to our package, these updates get an updated version number
+
+  -Version numbers in npm follow a standard called "SemVer".
+    -This stands for "Semantic Version".
+      -The specification for this standard can be found at http://semver.org.
+
+      The tl;dr version is that for a version like this:
+
+        1.2.3
+        ^ ^ ^
+        | | `-- Patch version. Update for every change.
+        | `---- Minor version. Update for API additions.
+        `------ Major version. Update for breaking API changes.
+        -npm has a special command called `npm version`
+        -this will update your package.json file for you, and also commit the change to git if your project is a git repository.
+          -if you don't trust the machines, you can open up your package.json file by hand, and put some new numbers in the "version" field
+          -The npm registry won't let you publish a new release of your package without updating the version number!
+            -get used to the idea of bumping the version whenever you want to publish, even if the change is really minor.
